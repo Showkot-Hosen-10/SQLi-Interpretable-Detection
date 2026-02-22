@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Register - Academic Portal{% endblock %}
+{% block content %}
+<div style="max-width: 600px; margin: 0 auto;">
+    <div class="card">
+        <h2><i class="fas fa-user-plus"></i> Create Account & Student Profile</h2>
+        <form method="POST">
+            <!-- ✅ LOGIN CREDENTIALS (TOP) -->
+            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h4><i class="fas fa-lock"></i> Login Credentials</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <input type="text" name="username" placeholder="Choose Username (e.g. john)" required 
+                           style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;">
+                    <input type="password" name="password" placeholder="Choose Password" required 
+                           style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;">
+                </div>
+            </div>
+            
+            <!-- ✅ STUDENT PROFILE -->
+            <h4><i class="fas fa-user"></i> Student Information</h4>
+            <input type="text" name="name" placeholder="Full Name (e.g. John Doe)" required 
+                   style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 1rem;">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <input type="text" name="student_id" placeholder="Student ID (e.g. STU005)" required 
+                       style="padding: 12px; border: 2px solid #ddd; border-radius: 8px;">
+                <input type="email" name="email" placeholder="Email (john@email.com)" required 
+                       style="padding: 12px; border: 2px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <input type="text" name="address" placeholder="Address (e.g. Dhaka, Bangladesh)" required 
+                   style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 1rem;">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                <input type="number" name="admission_fee" placeholder="Admission Fee (50000)" step="0.01" required 
+                       style="padding: 12px; border: 2px solid #ddd; border-radius: 8px;">
+                <input type="text" name="result" placeholder="Result (A+, A, A-, B+)" required 
+                       style="padding: 12px; border: 2px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <button type="submit" class="btn" style="width: 100%; font-size: 18px; padding: 15px;">
+                ✅ Create Account & Profile
+            </button>
+        </form>
+        
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #e8f5e8; border-radius: 10px; text-align: center;">
+            <h4><i class="fas fa-info-circle"></i> Demo Login</h4>
+            <p><strong>Student:</strong> student / student123</p>
+            <p><strong>Admin:</strong> admin / admin123</p>
+        </div>
+        
+        <div style="margin-top: 1rem; text-align: center;">
+            <a href="{{ url_for('login') }}" class="btn" style="background: #95a5a6; width: 48%;">← Back to Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
