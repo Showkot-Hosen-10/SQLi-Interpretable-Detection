@@ -35,14 +35,15 @@ The pipeline consists of three core layers:
 ## 📁 Repository Structure
 
 ```text
-├── SQLi Web App Project/
-│   ├── app.py                # Flask Production Server
-│   ├── sqli_detector_model.joblib               # Serialized (.joblib) DT & TF-IDF Vectorizer
-│   ├── sqli_explainer.joblib            # CSS/JS for SOC Dashboard
-│   ├──sqli_vectorizer.zip            # HTML Interfaces (User & Admin)
-│   ├── requirements.txt      # Dependency Specification
-│   └── Test Payloads.md         # SQLite Backend for Alert Logging
-    └── Datasets Links.md              # Reference links to Kaggle sources
+├── Datasets/                 # Local data samples or placeholders
+├── templates/                # HTML Interfaces (Search Bar & SOC Dashboard)
+├── app.py                    # Flask Production Server
+├── sqli_detector_model.joblib # Serialized (.joblib) Decision Tree Model
+├── sqli_explainer.joblib      # Pre-computed SHAP Explainer
+├── sqli_vectorizer.zip       # Compressed TF-IDF Vectorizer
+├── requirements.txt          # Python Dependency Specification
+├── Test Payloads.md          # Sample SQLi payloads for testing
+└── README.md                 # Project Documentation & Reproducibility Guide
 
 ```
 
@@ -53,15 +54,20 @@ The pipeline consists of three core layers:
 ### 1. Environment Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/Showkot-Hosen-10/ML-Based-Cyberdefence.git
-cd "ML-Based-Cyberdefence/SQLi Web App Project"
+# Clone the newly created repository
+git clone https://github.com/Showkot-Hosen-10/SQLi-Interpretable-Detection.git
+cd SQLi-Interpretable-Detection
 
 # Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Activate on Windows:
+venv\Scripts\activate
+# Activate on macOS/Linux:
+# source venv/bin/activate
 
 # Install dependencies
+pip install -r requirements.txt
 pip install -r requirements.txt
 
 ```
@@ -113,14 +119,20 @@ This allows security teams to verify the "logic" behind the alert instantly.
 If you use this code or research in your work, please cite:
 
 ```bibtex
-@inproceedings{blind2025sqli,
-  author={blind_author},
-  title={Interpretable SQL Injection Detection: Lightweight Decision Trees with SHAP-Enhanced Deployment},
-  year={2025},
-  note={Under Peer Review}
+@inproceedings{hosen2026sqli,
+  author    = {Hosen, Showkot and others},
+  title     = {Interpretable {SQL} Injection Detection: Lightweight Decision Trees with {SHAP}-Enhanced Deployment},
+  booktitle = {Proceedings of the 2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN)},
+  year      = {2026},
+  pages     = {1--6}, % Update these once you have the final page numbers
+  address   = {Chittagong, Bangladesh},
+  month     = {Apr.},
+  publisher = {IEEE},
+  note      = {979-8-3315-4990-9/26/\$31.00 \copyright 2026 IEEE}
 }
 
 ```
+
 
 
 
