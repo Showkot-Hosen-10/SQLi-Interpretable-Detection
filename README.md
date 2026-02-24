@@ -68,7 +68,6 @@ venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-pip install -r requirements.txt
 
 ```
 
@@ -132,6 +131,7 @@ If you use this code or research in your work, please cite:
 }
 
 ```
+
 
 
 
