@@ -1,6 +1,9 @@
 
 
 ---
+<p align="center">
+  <img src="4385.png" alt="Paper 4385 Poster" width="850"/>
+</p>
 
 # Interpretable SQL Injection Detection: Lightweight Decision Trees with SHAP-Enhanced Deployment
 
@@ -131,6 +134,7 @@ If you use this code or research in your work, please cite:
 }
 
 ```
+
 
 
 
