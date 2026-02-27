@@ -1,14 +1,14 @@
 
 
 ---
-<p align="center">
-  <img src="4385.png" alt="Paper 4385 Poster" width="850"/>
-</p>
+
 
 # Interpretable SQL Injection Detection: Lightweight Decision Trees with SHAP-Enhanced Deployment
 
 This repository contains the official implementation of the research paper: **"Interpretable SQL Injection Detection: Lightweight Decision Trees with SHAP-Enhanced Deployment."**
-
+<p align="center">
+  <img src="4385.png" alt="Paper 4385 Poster" width="850"/>
+</p>
 The project addresses the computational bottleneck of Deep Learning (DL) in web security by utilizing a high-performance **111-parameter Decision Tree** model, integrated with **SHAP (SHapley Additive exPlanations)** for real-time transparency in Security Operations Centers (SOC).
 
 ---
@@ -134,6 +134,7 @@ If you use this code or research in your work, please cite:
 }
 
 ```
+
 
 
 
